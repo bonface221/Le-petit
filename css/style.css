@@ -261,7 +261,7 @@ header.sticky{
 }
 
 .deal{
-    min-height: 70vh;
+    min-height: 75vh;
     background: url(../images/deal-bg.webp);
     background-size: cover;
     background-position: center;
@@ -282,6 +282,48 @@ header.sticky{
     width: 45rem;
     text-align: center;
 }
+.products .box-container{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.products .box-container .box{
+    flex: 1 1 30%;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    border: .1rem solid rgba(0, 0, 0, .1);
+    padding: 2rem;
+    border-radius: .5rem;
+    margin: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+.products .box-container .box img{
+    width: 15rem;
+}
+.products .box-container .box .content{
+    padding: 1rem;
+}
+.products .box-container .box .content .stars i{
+  font-size: 1.5rem;
+  color: var(--yellow);
+}
+.products .box-container .box .content h3{
+    font-size: 2rem;
+    color: #333;
+    padding: .5rem 0;
+}
+.products .box-container .box .content .price{
+    font-size: 2rem;
+    color: #666;
+    
+}
+.products .box-container .box .content .price span{
+    text-decoration: line-through;
+    padding-left: .5rem;
+    font: 1.5rem;
+}
+
 
 
 
@@ -339,7 +381,16 @@ header.sticky{
     
     
 }
-
+@media (max-width:758px){
+    .products .box-container .box{
+        flex-flow: column;
+        
+    }
+    .products .box-container .box img{
+        width: 100%;
+    }
+    
+}
 @media (max-width:600px){
       .home{
           background-position: 30%;
@@ -355,6 +406,11 @@ header.sticky{
     padding:1rem 0;
 }
 }
+@media (max-width:464px) {
+    .products .box-container {
+        flex-flow: column;
+    }
+}
 @media (max-width:400px) {
     .home{
         justify-content: center;
@@ -368,6 +424,15 @@ header.sticky{
     .deal h3{
         width: auto;
         font-size: 4rem;
+    }
+    .featured .box-container .box{
+        flex-flow: column;
+    }
+    .products .box-container .box .content{
+        text-align: center;
+    }
+    .featured .box-container .box .content{
+        text-align: center;
     }
     
 }
