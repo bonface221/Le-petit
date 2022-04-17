@@ -186,13 +186,16 @@ header.sticky{
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
-    justify-content: space-around;
+    justify-content: space-evenly;
     padding: 1rem 0;
 }
 .category .box-container .box{
     width: 25rem;
     text-align: center;
-    margin: 2rem;
+    
+     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    border: .1rem solid rgba(0, 0, 0, .1);
+    padding: 4rem;
     
 
 }
@@ -299,7 +302,7 @@ header.sticky{
     align-items: center;
 }
 .products .box-container .box img{
-    width: 15rem;
+   width: 17rem;
 }
 .products .box-container .box .content{
     padding: 1rem;
@@ -322,6 +325,40 @@ header.sticky{
     text-decoration: line-through;
     padding-left: .5rem;
     font: 1.5rem;
+}
+.offer .box-container{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.offer .box-container .box{
+    flex: 1 1 40%;
+    position: relative;
+    margin: 2rem;
+
+}
+.offer .box-container .box img{
+    width: 100%;
+}
+
+.offer .box-container .box .content{
+    position: absolute;
+    top: 50%; left: 10%;
+    transform: translateY(-50%);
+    color: #333;
+}
+.offer .box-container .box .content span{
+    font-size: 2rem;
+}
+.offer .box-container .box .content h3{
+    font-size: 3.5rem;
+}
+.offer .box-container .box:first-child .content  .btn{
+    background: #fff;
+}
+.offer .box-container .box:last-child .content {
+    color: #fff;
 }
 
 
@@ -378,16 +415,26 @@ header.sticky{
     .home .content h3{
         font-size: 4.5rem;
     }
+    .offer .box-container .box .content h3{
+        font-size:2.5rem;
+    }
     
     
+}
+@media (max-width:856px){
+    .products .box-container .box .content .btn{
+        padding: .4rem 1rem;
+        font-size: 1.4rem;
+    }
 }
 @media (max-width:758px){
     .products .box-container .box{
         flex-flow: column;
         
     }
-    .products .box-container .box img{
-        width: 100%;
+    .products .box-container .box .content .btn{
+        padding: .7rem 2.5rem;
+        font-size: 1.5rem;
     }
     
 }
@@ -399,6 +446,7 @@ header.sticky{
 @media (max-width:576px){
     .category .box-container .box{
         width: 100%;
+  
     }
     .category .box-container .box h3{
     color: #333;
@@ -409,6 +457,9 @@ header.sticky{
 @media (max-width:464px) {
     .products .box-container {
         flex-flow: column;
+    }
+    .products .box-container .box{
+        width: 100%;
     }
 }
 @media (max-width:400px) {
@@ -433,6 +484,9 @@ header.sticky{
     }
     .featured .box-container .box .content{
         text-align: center;
+    }
+    .offer .box-container .box .content span{
+        font-size:1.5rem;
     }
     
 }
